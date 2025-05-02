@@ -7,7 +7,7 @@
         <!--this is displayed data-->
         <!-- Baloo 2 for text, modak oro bagel fat one potentially-->
         <title>
-            Kiowoah
+            Kiowoah/Home
         </title>
 <!-- CSS portion-->
         <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
                 color: black;
                 margin-top: 20px;
                 text-decoration: underline;
-                text-decoration-thickness: 2px; 
+                text-decoration-thickness: 5px; 
             }
             .navigation {
                 text-align: center;
@@ -55,11 +55,12 @@
             
             li {
                 display: inline-block;
+                border-radius: 5px;
                 
             }
 
             li a {
-                display: block;
+                display: inline-block;
                 border-radius: 5px;
                 padding: 5px;
             }
@@ -68,9 +69,11 @@
                 background-color: lightblue;
             }
 
-            li a .active {
-                background-color: red;
+            li:hover{
+                background-color: aliceblue;
             }
+
+            
 
             p {
                 background-color: white;
@@ -81,6 +84,50 @@
                 border-radius: 5px;
 
             }
+
+            .Service {
+                margin-left: 0;
+            }
+
+            .drop {
+            cursor: pointer;
+            }
+        
+            .dropdown {
+            position: relative;
+            display: inline-block;
+            }
+
+            .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            z-index: 1;
+            }
+
+            .dropdown-content a {
+            padding: 12px 16px;
+            
+            text-decoration: none;
+            display: block;
+            }
+
+            .dropdown-content a:hover {background-color: aliceblue}
+
+            .dropdown:hover .dropdown-content {
+            display: block;
+            }
+            .nav-item {
+            display: inline-block;
+            border-radius: 5px;
+            padding: 5px; 
+            }
+
+            .nav-item:hover {
+            background-color: lightblue; /* match the li a:hover */
+            }
+                                
 
         </style>
     </head>
@@ -95,7 +142,15 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="Gallery.html">Gallery</a></li>
+                    <div class="dropdown">
+                        <span class="drop"><li class="nav-item"><a href="Gallery.html">Gallery</a></li></span>
+                        <div class="dropdown-content">
+                            <a href="Gallery.html#Necklaces">Necklaces</a>
+                            <a href="Gallery.html#Earings">Earings</a>
+                            <a href="Gallery.html#Rings">Rings</a>
+                            <a href="Gallery.html#Nails">Nails</a>
+                        </div>
+                    </div>
                     <li><a href="About.html">About</a></li>
                     <li><a href="Contact.html">Contact</a></li>
                 </ul>
@@ -104,9 +159,11 @@
 
         <br>
         
-        <p>
+        
             this is where we would post news, jewelry for sale, specials or blogs type of postings
-        </p>
+        
+
+        
 
     </body>
 </html>
